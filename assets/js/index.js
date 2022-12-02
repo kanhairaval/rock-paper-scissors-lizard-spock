@@ -15,7 +15,15 @@ if (
     userInput != "SPOCK"
   ) {
     window.alert("Are you stupid? I just said choose from one of the following options.");
-  } else if (userInput === computerChoice) {
+  } else {
+    window.alert("Good luck with your choice, hope you chose wisely !!!")
+  }
+
+  let computerChoice = options[Math.floor(Math.random() * options.length)];
+
+  window.alert(`The computer chose ${computerChoice}.`);
+  
+  if (userInput === computerChoice) {
     window.alert("It's a tie !!!")
  } else if (
  (userInput === "ROCK" && computerChoice === "SCISSORS") ||
@@ -29,14 +37,10 @@ if (
  (userInput === "PAPER" && computerChoice === "SPOCK") ||
  (userInput === "SPOCK" && computerChoice === "ROCK")
  ) {
-    window.alert("Damn ! You're good at this, You winn !!!")
+    window.alert("Damn ! You're good at this, You win !!!")
  } else {
     window.alert("Wan Wan, You Lose !!!")
  }
-
- let computerChoice = options[Math.floor(Math.random() * options.length)];
-
- window.alert(`The computer chose ${computerChoice}.`);
 })
 
 //If user input is invalid, stop executing the next line of code javascript?
