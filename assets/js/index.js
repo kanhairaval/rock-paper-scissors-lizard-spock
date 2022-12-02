@@ -1,15 +1,18 @@
-let options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-let userInput = "";
+let options = ["ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK"];
 
 let btnClick = document.getElementById("strtbtn");
 
-let computerChose = for (let i = 0; i < options.length; i++) {
-    computerChose = i.charAt(Math.floor(Math.random() * options.length));
-}
-
 btnClick.addEventListener("click", function(){ 
- window.prompt("Please, choose your fighter and type in one of the following inputs rock, paper, scissors, lizard, spock. Choose wisely !!!");
- if (userInput === "ROCK") {
-  
+let userInput = window.prompt("Please, choose your fighter and type in one of the following inputs rock, paper, scissors, lizard, spock. Choose wisely !!!");
+ if (!userInput) {
+    return;
  }
+
+ userInput = userInput.toUpperCase();
+
+ let computerChoice = options.charAt(Math.floor(Math.random() * options.length));
+
+ console.log(computerChoice);
+
+ window.alert(`The computer chose ${computerChoice}.`);
 })
